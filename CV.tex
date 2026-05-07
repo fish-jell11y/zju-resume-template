@@ -1,12 +1,10 @@
 \documentclass[11pt]{article}
 
-
 \setlength{\parindent}{0pt}
 \usepackage{xltxtra}
 \usepackage{hyperref}
 \hypersetup{hidelinks}
 \usepackage{url}
-\urlstyle{tt}
 \usepackage{xcolor}
 \definecolor{CVBlue}{RGB}{23,110,191}
 \usepackage{calc}
@@ -17,7 +15,6 @@
 \usepackage{xeCJK}
 \usepackage{enumitem}
 \CJKsetecglue{} %% 取消中文与数字之间的间隙
-
 
 %% 主文档字体设置
 \setmainfont[
@@ -33,11 +30,8 @@
     BoldFont = NotoSansSC-Bold.ttf, % 加粗字体
 ]{NotoSansSC-Regular.otf} % 正文字体
 
-
 \usepackage{relsize}
 \usepackage{xspace}
-
-% 使用 fontawesome（部分图标）
 \usepackage{fontawesome} 
 
 % A4纸，上下左右边距
@@ -53,103 +47,89 @@
 \renewcommand{\baselinestretch}{1.5} % 行间距设为1.5
 
 \usepackage{titlesec}
-\usepackage{enumitem}
 \setlist{noitemsep} % 取消列表项间的额外间距
-%\setlist{nosep} % 取消所有垂直间距
 \setlist[itemize]{topsep=0.25em, leftmargin=*}
 \setlist[enumerate]{topsep=0.25em, leftmargin=*}
 
 % --- 用于控制【不同项目之间】的垂直距离 ---
 \newlength{\interProjectSpacing}
-\setlength{\interProjectSpacing}{0.9em} % <--- 在此调整项目之间的距离
+\setlength{\interProjectSpacing}{0.9em} 
 \newcommand{\projectsep}{\vspace{\interProjectSpacing}}
 
 % --- 用于控制【项目标题】与下方【项目描述】的距离 ---
 \newlength{\intraProjectTitleSep}
-\setlength{\intraProjectTitleSep}{0.4em} % <--- 在此调整标题和描述的距离
+\setlength{\intraProjectTitleSep}{0.4em} 
 \newcommand{\titlebreak}{\\[\intraProjectTitleSep]}
 
 % --- 用于控制【项目描述】与下方【要点列表】的距离 ---
 \newlength{\intraProjectListTopSep}
-\setlength{\intraProjectListTopSep}{0.2em} % <--- 在此调整描述和列表的距离
+\setlength{\intraProjectListTopSep}{0.2em} 
 
 % =======================================================================
 
-
-\titleformat{\section}         % 定制 \section 命令 
-{\large\bfseries\raggedright} % 将 section 标题设置为大号、粗体且左对齐
-{}{0em}                      % 可用于为所有 section 添加前缀（如“章节...”）
-{}                           % 可用于在标题前插入代码
-[{\color{CVBlue}\titlerule}]  % 在标题后插入一条横线
+\titleformat{\section}         
+{\large\bfseries\raggedright} 
+{}{0em}                      
+{}                           
+[{\color{CVBlue}\titlerule}]  
 \titlespacing*{\section}{0cm}{*1.6}{*1.2}
-
-
 
 \begin{document}
 \pagenumbering{gobble}
 
-%%%% 利用tikz来定位照片
-\begin{tikzpicture}[remember picture, overlay] 
-    \node[anchor = north east] at ($(current page.north east)+(-2cm,-1.2cm)$) {\includegraphics[height=3cm]{avatar.jpg}};
-  \end{tikzpicture}%
-  %%%% 利用tikz来定位学校Logo，这里只在第一页显示
-  \begin{tikzpicture}[remember picture, overlay] 
-    \node[anchor = north west] at ($(current page.north west)+(0.5cm,+1.0cm)$) {\includegraphics[height=6cm]{zju.png}};
-  \end{tikzpicture}%
-\centerline{\LARGE\bfseries{胡豆}} 
+%%%% 若本地有图片文件，可取消下方注释以显示照片和校徽
+% \begin{tikzpicture}[remember picture, overlay] 
+%     \node[anchor = north east] at ($(current page.north east)+(-2cm,-1.2cm)$) {\includegraphics[height=3cm]{avatar.jpg}};
+% \end{tikzpicture}%
+% \begin{tikzpicture}[remember picture, overlay] 
+%     \node[anchor = north west] at ($(current page.north west)+(0.5cm,+1.0cm)$) {\includegraphics[height=6cm]{zju.png}};
+% \end{tikzpicture}%
 
-\centerline{\normalsize{\faPhone\ 111-1111-1111 \quad \faEnvelopeO\ \href{mailto:3230100000@zju.edu.cn}{3230100000@zju.edu.cn}}} 
+\centerline{\LARGE\bfseries{许珏凝}} 
 
-\centerline{\normalsize{\faGithubSquare\ \href{https://github.com/maksymilan}{https://github.com/maksymilan} \quad \faRssSquare\ \href{https://maksymilan.github.io/}{https://maksymilan.github.io}}} 
+\vspace{0.5em}
+\centerline{\normalsize{\faPhone\ 15219616176 \quad \faEnvelopeO\ \href{mailto:3230105045@zju.edu.cn}{3230105045@zju.edu.cn}}} 
+
+\vspace{1.5em}
     
 \section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faGraduationCap}\ 教育背景}    
-\textbf{浙江大学} \hfill 2023.9 -- 至今\\[0.5em] % 标题和正文间加一点距离
-CC98烂坑挖掘工程与技术\quad 大二 
-\begin{itemize}[nosep]
-    \item 相关课程：《烂坑挖掘及基础》、《高级挖坑技巧》、《烂坑数理统计》
-\end{itemize}
+\textbf{浙江大学} \hfill 2023.09 -- 至今\\[0.5em] 
+数学科学学院 \quad 数学与应用数学专业 \quad 大三 \\
+\textbf{学业成绩：} 前五学期总绩点 4.59/5.00 \quad \textbf{专业排名：} 4/69 \\
+\textbf{外语水平：} CET-6 (635分)
 
 \section{\makebox[\widthof{\faUsers}][c]{\color{CVBlue}\faUsers}\ 项目经历}
 
-% --- 第一个项目 ---
-% 将标题行末尾的 \\ 替换为 \titlebreak 命令
-\textbf{98烂坑风控与可视化作战平台} \hfill 2024.08 -- 至今 \titlebreak
-项目描述：为维护cc98社区的讨论纯度、净化“心灵之约”版块风气，本项目旨在对“烂坑”进行科学、严谨的量化分析，并引入\textbf{大语言模型(LLM)}对烂坑帖进行\textbf{自动化情感极性与“离谱指数”标注}。
-% 在 itemize 的选项中，使用 topsep=\intraProjectListTopSep 来控制上边距
+\textbf{美国大学生数学建模竞赛 (MCM/ICM) \quad S奖} \hfill 2025.01 -- 2025.02 \titlebreak
+项目描述：针对奥运会奖牌榜预测与“名帅效应”量化问题，构建基于机器学习与统计推断的综合模型。
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{数据与后端}：运用 \textbf{Go} 语言及 \textbf{GORM} 框架，实现对全站“烂坑”帖的7x24小时全天候\textbf{抓取}与\textbf{入库}(MySQL)。
-    \item \textbf{可视化前端}：采用原生 \textbf{HTML/CSS/JS} 构建了“烂坑”实时监控\textbf{作战大屏}。实现了坑主成分分析、挖坑热力图、年度烂坑王榜单等\textbf{可视化图表}，并通过 \textbf{AJAX} 异步刷新，确保数据洞察的实时性。
-    \item \textbf{核心产出}：全面掌握了从\textbf{数据采集、清洗、LLM标注到可视化分析}的“反烂坑”全链路技术。
+    \item \textbf{特征工程与奖牌预测}：基于运动员历史表现等10项特征构建 \textbf{随机森林 (Random Forest)} 模型，精准预测2028年奥运会奖牌榜 ($R^2=0.87$)；并结合 \textbf{K-means聚类与卡方检验}，深挖各参赛国的优势体育项目。
+    \item \textbf{归因分析与多因素融合}：为剔除历史成绩干扰、孤立量化“名帅效应”，构建多元逻辑回归模型，并创新性引入 \textbf{优势分析 (Dominance Analysis)} 解决多变量依赖问题，证实教练因素对连续夺金的显著贡献度 (26.1\%)。
+    \item \textbf{核心产出}：完成并提交25页全英文数据驱动数模论文，为国家奥委会的资源分配提供量化决策支持。
 \end{itemize}
 
-% 使用 \projectsep 命令来分隔两个项目
 \projectsep
 
-% --- 第二个项目 ---
-\textbf{AIGC驱动的超进化自动挖坑机 (Agent)} \hfill 2025.02 -- 至今 \titlebreak
-项目描述：为探索心灵版规的边界，以及测试版主锁沉反应速度的极限，本项目基于\textbf{多智能体协作(MCP)与LLM}技术，开发了一款能\textbf{自主“挖坑”与“互坑”}的AI Agent。
+\textbf{代数曲线和模空间相关问题探讨 (院级SRTP项目) \quad 项目负责人} \hfill 2025.03 -- 至今 \titlebreak
+项目描述：本项目旨在探索基础代数几何理论与高维数据降维、数值计算算法之间的交叉联系与应用表现。
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{并发与调度}：后端采用 \textbf{Go} 语言，充分利用 \textbf{Goroutine} 和 \textbf{Channel} 的高并发模型，模拟\textbf{用户并发在线}，执行定时挖坑，确保挖坑行动的\textbf{隐蔽性}与\textbf{高效性}。
-    \item \textbf{实时监控与响应}：运用 \textbf{WebSocket} 协议实现了对目标帖子的\textbf{实时监听与交互}。确保在烂坑被识破的第一时间，Agent能光速完成\textbf{“lktp”}或\textbf{反向钓鱼}操作，展现出极高的AI博弈能力。
-    \item \textbf{可视化GUI}：前端使用 \textbf{React} 框架构建了\textbf{后台管理的可视化面板 (Admin Panel)}。可一键下达挖坑指令、动态调整Agent的\textbf{指令}、并实时监控数据。
+    \item \textbf{理论基础与几何降维}：系统学习代数簇、层与上同调等核心理论；重点剖析 \textbf{Johnson-Lindenstrauss 引理}，探索高维数据随机投影后的几何结构保持性，研究其在数据科学降维算法中的底层数理逻辑。
+    \item \textbf{数值模拟与计算验证}：跨越纯代数理论的抽象性，引入算法思维，规划并开展使用 \textbf{Python/SageMath} 对代数曲线族进行参数化数值模拟与动态绘制；通过椭圆曲线等显式计算实例，验证并可视化抽象模空间的拓扑性质。
 \end{itemize}
 
-\section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 技术栈}
-\begin{itemize}[nosep]
-    \item \textbf{编程语言：} \textbf{Go}, Python, C++
-    \item \textbf{开发工具：} SSH, Git, Vim, MakeFile,LaTex
-    \item \textbf{操作系统：} Linux
-\end{itemize}
-\section{\makebox[\widthof{\faGraduationCap}][c]{\color{CVBlue}\faList}\ 获奖情况}
-\begin{itemize}
-    \item CC98年度用户 \hfill 2023.12
-    
-\end{itemize}
-    
-\section{\makebox[\widthof{\faInfo}][c]{\color{CVBlue}\faInfo}\ 其他}
+\section{\makebox[\widthof{\faList}][c]{\color{CVBlue}\faList}\ 获奖情况}
 \begin{itemize}[parsep=0.5ex]
-    \item \textbf{技术博客：} \href{https://maksymilan.github.io/}{https://maksymilan.github.io/}
-    \item \textbf{GitHub：} \href{https://github.com/maksymilan}{https://github.com/maksymilan} 
-    \item \textbf{英语水平：} CET-4, CET-6
+    \item 2023-2024学年 国家奖学金
+    \item 2024-2025学年 浙江省政府奖学金
+    \item 浙江大学 一等奖学金
+    \item 浙江大学 优秀学生
+    \item 全国大学生数学竞赛（初赛） 二等奖
+    \item 浙江省大学生数学竞赛（数学类） 三等奖
+\end{itemize}
+    
+\section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 技能与其他}
+\begin{itemize}[nosep]
+    \item \textbf{编程语言：} Python, C
+    \item \textbf{排版与科学计算：} LaTeX, 了解数值模拟及算法求解工具
 \end{itemize}
 \end{document}
