@@ -77,13 +77,13 @@
 \begin{document}
 \pagenumbering{gobble}
 
-%%%% 若本地有图片文件，可取消下方注释以显示照片和校徽
-% \begin{tikzpicture}[remember picture, overlay] 
-%     \node[anchor = north east] at ($(current page.north east)+(-2cm,-1.2cm)$) {\includegraphics[height=3cm]{avatar.jpg}};
-% \end{tikzpicture}%
-% \begin{tikzpicture}[remember picture, overlay] 
-%     \node[anchor = north west] at ($(current page.north west)+(0.5cm,+1.0cm)$) {\includegraphics[height=6cm]{zju.png}};
-% \end{tikzpicture}%
+
+ \begin{tikzpicture}[remember picture, overlay] 
+     \node[anchor = north east] at ($(current page.north east)+(-2cm,-1.2cm)$) {\includegraphics[height=3cm]{微信图片_2026-05-07_161653_686.jpg}};
+ \end{tikzpicture}%
+ \begin{tikzpicture}[remember picture, overlay] 
+     \node[anchor = north west] at ($(current page.north west)+(0.5cm,+1.0cm)$) {\includegraphics[height=6cm]{zju.png}};
+ \end{tikzpicture}%
 
 \centerline{\LARGE\bfseries{许珏凝}} 
 
@@ -103,18 +103,18 @@
 \textbf{美国大学生数学建模竞赛 (MCM/ICM) \quad S奖} \hfill 2025.01 -- 2025.02 \titlebreak
 项目描述：针对奥运会奖牌榜预测与“名帅效应”量化问题，构建基于机器学习与统计推断的综合模型。
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{特征工程与奖牌预测}：基于运动员历史表现等10项特征构建 \textbf{随机森林 (Random Forest)} 模型，精准预测2028年奥运会奖牌榜 ($R^2=0.87$)；并结合 \textbf{K-means聚类与卡方检验}，深挖各参赛国的优势体育项目。
+    \item \textbf{特征工程与奖牌预测}：基于运动员历史表现等10项特征构建 \textbf{随机森林 (Random Forest)} 模型，精准预测奥运会奖牌榜 ($R^2=0.87$)；并结合 \textbf{K-means聚类与卡方检验}，深挖各参赛国的优势体育项目。
     \item \textbf{归因分析与多因素融合}：为剔除历史成绩干扰、孤立量化“名帅效应”，构建多元逻辑回归模型，并创新性引入 \textbf{优势分析 (Dominance Analysis)} 解决多变量依赖问题，证实教练因素对连续夺金的显著贡献度 (26.1\%)。
-    \item \textbf{核心产出}：完成并提交25页全英文数据驱动数模论文，为国家奥委会的资源分配提供量化决策支持。
+    \item \textbf{核心产出}：完成并提交25页全英文数据驱动数模论文。
 \end{itemize}
 
 \projectsep
 
 \textbf{代数曲线和模空间相关问题探讨 (院级SRTP项目) \quad 项目负责人} \hfill 2025.03 -- 至今 \titlebreak
-项目描述：本项目旨在探索基础代数几何理论与高维数据降维、数值计算算法之间的交叉联系与应用表现。
+项目描述：本项目旨在探索基础代数几何核心理论，并初步调研其在数据降维等应用数学领域的理论拓展。
 \begin{itemize}[nosep, topsep=\intraProjectListTopSep]
-    \item \textbf{理论基础与几何降维}：系统学习代数簇、层与上同调等核心理论；重点剖析 \textbf{Johnson-Lindenstrauss 引理}，探索高维数据随机投影后的几何结构保持性，研究其在数据科学降维算法中的底层数理逻辑。
-    \item \textbf{数值模拟与计算验证}：跨越纯代数理论的抽象性，引入算法思维，规划并开展使用 \textbf{Python/SageMath} 对代数曲线族进行参数化数值模拟与动态绘制；通过椭圆曲线等显式计算实例，验证并可视化抽象模空间的拓扑性质。
+    \item \textbf{代数几何基础理论研究}：系统研读代数曲线与模空间相关专著，深入学习代数簇、层论、上同调理论等核心理论，构建扎实的纯数学理论框架。
+    \item \textbf{降维理论的几何视点探索}：跨学科调研数据科学中的底层数理逻辑，重点剖析 Johnson-Lindenstrauss 引理；从纯理论角度探讨高维数据随机投影后的几何结构保持性，挖掘代数几何视角下的潜在应用价值。
 \end{itemize}
 
 \section{\makebox[\widthof{\faList}][c]{\color{CVBlue}\faList}\ 获奖情况}
@@ -130,6 +130,6 @@
 \section{\makebox[\widthof{\faCogs}][c]{\color{CVBlue}\faCogs}\ 技能与其他}
 \begin{itemize}[nosep]
     \item \textbf{编程语言：} Python, C
-    \item \textbf{排版与科学计算：} LaTeX, 了解数值模拟及算法求解工具
+    \item \textbf{专业技能：} 熟练使用 LaTeX 进行学术文档排版，具备良好的数据分析基础
 \end{itemize}
 \end{document}
